@@ -6,10 +6,13 @@
 <body>
     <h1 th:text="#{input.title}"></h1>
     <form action="/output" method="post">
-        <label th:text="#{input.label}"></label>
-        <input type="text" name="value" />
+        <h2 th:text="#{input.label}"></h2>
+
+        <p>値を入力してください</p>
         <p th:if="${previous}" th:text="'前回入力された値は「' + ${previous} + '」でした。'"></p>
-        <button type="submit" th:text="#{input.button}"></button>
+        <input type="text" name="value" />
+
+        <button type="submit" th:text="#{input.button}">送信</button>
 
     </form>
     　　
