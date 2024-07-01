@@ -8,10 +8,11 @@
     <form action="/output" method="post">
         <label th:text="#{input.label}"></label>
         <input type="text" name="value" />
+        <p th:if="${previous}" th:text="'前回入力された値は「' + ${previous} + '」でした。'"></p>
         <button type="submit" th:text="#{input.button}"></button>
 
     </form>
-    　　<p th:if="${previous}" th:text="'前回入力された値は「' + ${previous} + '」でした。'"></p>
+    　　
 </body>
 </html>
 
